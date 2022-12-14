@@ -8,12 +8,11 @@
             </mat-progress-bar>
             <div class="progress-pct">{{g.aggProgress|number : '1.0-0'}}%</div>
             
-            <div *ngIf="g.expired" class="simple-caption-darker-no-margin warn-text"><fa-icon [icon]="iconService.fasClock"></fa-icon> Expired</div>
-            <div *ngIf="g.expirationDate!=null"  class="simple-caption-darker-no-margin"><fa-icon [icon]="iconService.fasClock"></fa-icon> {{g.expirationDate | d2cAgoHumanized:true}}</div>
+            <div *ngIf="g.expired" class="simple-caption-darker-no-margin warn-text"> Expired</div>
+            <div *ngIf="g.expirationDate!=null"  class="simple-caption-darker-no-margin"> {{g.expirationDate | d2cAgoHumanized:true}}</div>
         </div>
     </ng-container>
     <ng-template #isNull>
-        <fa-icon [icon]="iconService.farTimesSquare" class="faint" matTooltip="Pursuit missing, probably not available">
-        </fa-icon>
+        
     </ng-template>
 </div>

@@ -1,8 +1,6 @@
 <div class="fixed-spinner">
-  <fa-icon *ngIf="(loading|async)===true || (gearService.loading|async)===true" [icon]="iconService.farSpinner"
-    [spin]="true" size="3x" [fixedWidth]="true"></fa-icon>
-  <fa-icon *ngIf="(filtering|async)===true && !((loading|async)===true || (gearService.loading|async)===true)"
-    [icon]="iconService.fasCog" [spin]="true" size="3x" [fixedWidth]="true"></fa-icon>
+  
+  
 </div>
 <ng-container *ngIf="(loading|async)===false && selectedUser==null">
   <d2c-sign-in-required></d2c-sign-in-required>
@@ -20,7 +18,7 @@
             <ng-template #noEmblem>
               <mat-button-toggle-group style="margin-right:5px">
                 <mat-button-toggle>
-                  <fa-icon class="accent-text" [icon]="iconService.fasForklift"></fa-icon>
+                  
                 </mat-button-toggle>
               </mat-button-toggle-group>
             </ng-template>
@@ -33,18 +31,18 @@
         (change)="tabChanged()">
         <mat-button-toggle *ngFor="let o of options" [value]="o">
 
-          <fa-icon *ngIf="o.name=='Weapons'" [icon]="iconService.farAxeBattle"></fa-icon>
-          <fa-icon *ngIf="o.name=='Armor'" [icon]="iconService.farHelmetBattle"></fa-icon>
+          
+          
           <i *ngIf="o.name=='Ghosts'" class="icon-ghost"></i>
-          <fa-icon *ngIf="o.name=='Vehicles'" [icon]="iconService.fasPlaneAlt"></fa-icon>
+          
           <i *ngIf="o.name=='Mods'" class="icon-modifications"></i>
-          <fa-icon *ngIf="o.name=='Material'" [icon]="iconService.farGem"></fa-icon>
+          
           <span class="d-none d-md-inline"> {{o.name}}</span>
         </mat-button-toggle>
       </mat-button-toggle-group>
       <mat-button-toggle-group style="margin-left:5px">
         <mat-button-toggle [matMenuTriggerFor]="menuCharPl" matTooltip="Character Power Levels">
-          <fa-icon [icon]="iconService.fasLevelUpAlt"></fa-icon> <span class="hide-mobile-inline"></span>
+           <span class="hide-mobile-inline"></span>
         </mat-button-toggle>
       </mat-button-toggle-group>
 
@@ -56,7 +54,7 @@
       </mat-menu>
       <mat-button-toggle-group style="margin-left:5px">
         <mat-button-toggle [matMenuTriggerFor]="menuGuides" matTooltip="Reference Info">
-          <fa-icon [icon]="iconService.farBooks"></fa-icon>
+          
         </mat-button-toggle>
       </mat-button-toggle-group>
 
@@ -64,16 +62,16 @@
         <a mat-menu-item
           href="https://www.patreon.com/PandaPaxxy/"
           class="header-link" target="_blank" rel="noopener">
-          <fa-icon [icon]="iconService.farBooks"></fa-icon> God Rolls Source: Panda's Patreon
+           God Rolls Source: Panda's Patreon
         </a>
         <a mat-menu-item href="https://twitter.com/D2Checklist" class="header-link" target="_blank" rel="noopener">
-          <fa-icon [icon]="iconService.fabTwitter"></fa-icon> D2Checklist Twitter updates
+           D2Checklist Twitter updates
         </a>
         <a mat-menu-item href="https://old.reddit.com/r/destinychecklistnet/" class="header-link" target="_blank" rel="noopener">
-          <fa-icon [icon]="iconService.fabReddit"></fa-icon> D2Checklist Subreddit
+           D2Checklist Subreddit
         </a>
         <a mat-menu-item href="https://www.youtube.com/channel/UCbpQ7BKU32m6J9jI2O8z09w" class="header-link" target="_blank" rel="noopener">
-          <fa-icon [icon]="iconService.fabYoutube"></fa-icon> Video tutorials
+           Video tutorials
         </a>
       </mat-menu>
     </div>
@@ -117,13 +115,13 @@
       </mat-form-field>
       <div>
         <button mat-button (click)="load()">
-          <fa-icon [icon]="iconService.fasSyncAlt"></fa-icon>
+          
         </button>
         <button mat-button [matMenuTriggerFor]="menuMoreOptions">
-          <fa-icon [icon]="iconService.fasEllipsisV"></fa-icon>
+          
         </button>
         <button mat-button *ngIf="markService.dirty$|async" (click)="markService.saveMarks()">
-          <fa-icon [icon]="iconService.fasSave"></fa-icon>
+          
         </button>
         <mat-checkbox [ngModel]="gearFilterStateService.hideDupes$|async" ngDefaultControl (ngModelChange)="toggleDupes($event)">
           Hide Dupes
@@ -131,8 +129,8 @@
         <button mat-button *ngIf="(gearFilterStateService.filtersDirty$|async)"
           (click)="gearFilterStateService.resetFilters()">
           <fa-stack>
-            <fa-icon [icon]="iconService.fasFilter" stackItemSize="1x"></fa-icon>
-            <fa-icon [icon]="iconService.fasBan" stackItemSize="2x" class="warn-text"></fa-icon>
+            
+            
           </fa-stack>
         </button>
 
@@ -146,27 +144,27 @@
       <ng-container
         *ngIf="option.type==ItemType.Weapon || option.type==ItemType.Armor || option.type==ItemType.Ghost || option.type==ItemType.Vehicle">
         <button mat-menu-item [matMenuTriggerFor]="menuBulkMove">
-          <fa-icon [icon]="iconService.falExchange"></fa-icon>&ensp;Move current rows to:
+          &ensp;Move current rows to:
         </button>
       </ng-container>
       <ng-container
         *ngIf="option.type==ItemType.Weapon || option.type==ItemType.Armor || option.type==ItemType.Ghost || option.type==ItemType.Vehicle">
         <button mat-menu-item [matMenuTriggerFor]="menuBulkTag">
-          <fa-icon [icon]="iconService.fasTags"></fa-icon>&ensp;Tag Current rows
+          &ensp;Tag Current rows
         </button>
       </ng-container>
       <button mat-menu-item (click)="copyAllVisibleToClipboard()">
-        <fa-icon [icon]="iconService.fasCopy"></fa-icon>&ensp;Copy current rows for Reddit
+        &ensp;Copy current rows for Reddit
       </button>
 
       <button mat-menu-item (click)="showTargetArmorStats()">
-        <fa-icon [icon]="iconService.fasSlidersV"></fa-icon>&nbsp;Armor Stat Prefs
+        &nbsp;Armor Stat Prefs
       </button>
       <button mat-menu-item (click)="showArmorPerks()">
-        <fa-icon [icon]="iconService.fasHelmetBattle"></fa-icon>&ensp;Show Armor Perks
+        &ensp;Show Armor Perks
       </button>
       <button mat-menu-item (click)="showUtilities()">
-        <fa-icon [icon]="iconService.fasCogs"></fa-icon>&ensp;Settings
+        &ensp;Settings
       </button>
     </mat-menu>
     <mat-menu #menuBulkMove="matMenu">
@@ -175,13 +173,13 @@
         {{target.label}}
       </button>
       <button mat-menu-item (click)="moveAllVisible(player.vault, gearFilterStateService.filterUpdated$)">
-        <fa-icon [icon]="iconService.falExchange"></fa-icon> {{player.vault.label}}
+         {{player.vault.label}}
       </button>
     </mat-menu>
     <mat-menu #menuBulkTag="matMenu">
       <ng-container *ngFor="let mc of markService.markChoices">
         <button mat-menu-item (click)="markCurrentRows(mc.value)">
-          <fa-icon [icon]="mc.icon"></fa-icon>&ensp; {{mc.label}}
+          &ensp; {{mc.label}}
         </button>
       </ng-container>
       <button mat-menu-item (click)="markCurrentRows(null)">
@@ -204,32 +202,32 @@
     <mat-menu #menuBulk="matMenu">
       <button mat-menu-item (click)="showBulkOperationHelp()">
         <span class="warn-text">
-          <fa-icon [icon]="iconService.fasQuestionCircle"></fa-icon>&ensp;Help
+          &ensp;Help
         </span>
       </button>
       <button mat-menu-item (click)="weaponGrindMode()">
-        <fa-icon [icon]="iconService.fasLevelUp"></fa-icon>&ensp;Weapon Grind Mode
+        &ensp;Weapon Grind Mode
       </button>
       <button mat-menu-item (click)="optimizeGunPerks()">
-        <fa-icon [icon]="iconService.fasMagic"></fa-icon>&ensp;Optimize Gun Perks
+        &ensp;Optimize Gun Perks
       </button>
       <button mat-menu-item (click)="showModWizard()">
-        <fa-icon [icon]="iconService.fasMagic"></fa-icon>&ensp;Armor Mod Wizard
+        &ensp;Armor Mod Wizard
       </button>
       <button mat-menu-item (click)="syncLocks()">
-        <fa-icon [icon]="iconService.fasLockAlt"></fa-icon>&ensp;Sync Locks
+        &ensp;Sync Locks
       </button>
       <button mat-menu-item (click)="showShardModeDialog()">
-        <fa-icon [icon]="iconService.fasTrash"></fa-icon>&ensp;Shard Mode
+        &ensp;Shard Mode
       </button>
       <button mat-menu-item (click)="showUpgradeModeDialog()">
-        <fa-icon [icon]="iconService.fasLevelUp"></fa-icon>&ensp;Upgrade Mode
+        &ensp;Upgrade Mode
       </button>
       <button mat-menu-item [matMenuTriggerFor]="menuBulkClear">
-        <fa-icon [icon]="iconService.fasForklift"></fa-icon>&ensp;Clear Inv
+        &ensp;Clear Inv
       </button>
       <button mat-menu-item (click)="showSeasonBreakdown()">
-        <fa-icon [icon]="iconService.fasWheat"></fa-icon>&ensp;Season Breakdown
+        &ensp;Season Breakdown
       </button>
     </mat-menu>
 
@@ -305,10 +303,8 @@
               Stats
 
               <ng-container *ngIf="option.type==ItemType.Weapon">
-                <fa-icon *ngIf="showAllWeaponStats" [icon]="iconService.falMinusSquare"
-                  matTooltip="Show default weapon stats" (click)="showAllWeaponStats=false"></fa-icon>
-                <fa-icon *ngIf="!showAllWeaponStats" [icon]="iconService.falPlusSquare" matTooltip="Show all weapon stats"
-                  (click)="showAllWeaponStats=true"></fa-icon>
+                
+                
               </ng-container>
             </th>
 
@@ -363,16 +359,16 @@
                   <button mat-menu-item
                     *ngIf="option.type==ItemType.Weapon || option.type==ItemType.Armor || option.type==ItemType.Ghost || option.type==ItemType.Vehicle"
                     (click)="showItem(i)">
-                    <fa-icon [icon]="iconService.falInfoSquare"></fa-icon> Details
+                     Details
                   </button>
                   <button mat-menu-item
                     *ngIf="option.type==ItemType.Weapon || option.type==ItemType.Armor || option.type==ItemType.Ghost || option.type==ItemType.Vehicle"
                     (click)="copyToClipboard(i)">
-                    <fa-icon [icon]="iconService.falCopy"></fa-icon> Copy for reddit
+                     Copy for reddit
                   </button>
                   <button mat-menu-item *ngIf="option.type == ItemType.Weapon && i.isRandomRoll"
                     (click)="showPossibleRolls(i)">
-                    <fa-icon [icon]="iconService.falDiceD20"></fa-icon> Show recommended rolls
+                     Show recommended rolls
                   </button>
 
                 </mat-menu>
@@ -381,7 +377,7 @@
                 <div>
                   <span class="simple-caption" *ngIf="i.owner|async as owner">{{owner.label}}</span>
                   <span *ngIf="i.postmaster" class="margin-left warn-text">
-                    <fa-icon [icon]="iconService.fasEnvelope"></fa-icon>
+                    
                   </span>
                   <d2c-god-roll-item [item]="i" [debugmode]="debugmode|async"></d2c-god-roll-item>
                 </div>
@@ -405,7 +401,7 @@
                       <div class="simple-caption fake-link">{{t.percent|number : '1.0-0'}}% Recipe</div>
                     </div>
                   </div>
-                  <div *ngIf="t.percent==100" class="margin-top-10 fake-link simple-caption" [routerLink]="['/',player.profile.userInfo.membershipType, player.profile.userInfo.membershipId, 'triumphs','tree',t.hash]">Recipe <fa-icon class="pad-left" [icon]="iconService.fasCheck"></fa-icon></div>
+                  <div *ngIf="t.percent==100" class="margin-top-10 fake-link simple-caption" [routerLink]="['/',player.profile.userInfo.membershipType, player.profile.userInfo.membershipId, 'triumphs','tree',t.hash]">Recipe </div>
                 </ng-container>
 
                 <ng-container *ngIf="i.exoticCatalystTriumph as t">
@@ -415,7 +411,7 @@
                       <div class="simple-caption fake-link">{{t.percent|number : '1.0-0'}}% Catalyst</div>
                     </div>
                   </div>
-                  <div *ngIf="t.percent==100" class="margin-top-10 fake-link simple-caption" [routerLink]="['/',player.profile.userInfo.membershipType, player.profile.userInfo.membershipId, 'triumphs','tree',t.hash]">Catalyst <fa-icon class="pad-left" [icon]="iconService.fasCheck"></fa-icon></div>
+                  <div *ngIf="t.percent==100" class="margin-top-10 fake-link simple-caption" [routerLink]="['/',player.profile.userInfo.membershipType, player.profile.userInfo.membershipId, 'triumphs','tree',t.hash]">Catalyst </div>
                 </ng-container>
 
               </td>
@@ -453,17 +449,17 @@
               <td class="limited-gear-width" *ngIf="option.type==ItemType.Weapon || option.type==ItemType.Armor
               || option.type==ItemType.Ghost || option.type==ItemType.Vehicle">
                 <button mat-button (click)="showCopies(i)">
-                  <fa-icon [icon]="iconService.falClone"></fa-icon> {{i.copies}}
+                   {{i.copies}}
                 </button>
                 <div class="vertical-pad" *ngIf="i.dupesByEnergyAndSeason">
                   <button mat-button (click)="showSimilarArmorBySlotAndEnergy(i)">
-                    <fa-icon [icon]="iconService.falPlusSquare"></fa-icon>
+                    
                     {{i.dupesTaggedToKeep}} / {{i.dupesByEnergyAndSeason}}
                   </button>
                 </div>
                 <div class="vertical-pad" *ngIf="i.dupesByFrameSlotAndEnergy">
                   <button mat-button (click)="showSimilarWeaponsByFrameSlotAndEnergy(i)">
-                    <fa-icon [icon]="iconService.falPlusSquare"></fa-icon>
+                    
                     {{i.dupesTaggedToKeep}} / {{i.dupesByFrameSlotAndEnergy}}
                   </button>
                 </div>
@@ -570,17 +566,17 @@
                 <div class="hide-mobile-block">
                   <button *ngFor="let mc of markService.markChoices" (click)="mark(mc.value,i)" mat-icon-button
                     [ngClass]="['tag-square-button','tag-button',mc.value]" [matTooltip]="mc.label">
-                    <fa-icon [icon]="mc.icon"></fa-icon>
+                    
                   </button>
                 </div>
                 <div class="mobile-only-block">
                   <button mat-icon-button [matMenuTriggerFor]="tagMenu">
-                    <fa-icon [icon]="iconService.fasTags"></fa-icon> Tag
+                     Tag
                   </button>
                   <mat-menu #tagMenu="matMenu">
                     <button *ngFor="let mc of markService.markChoices" (click)="mark(mc.value,i)" mat-menu-item
                       [ngClass]="['tag-button',mc.value]">
-                      <fa-icon [icon]="mc.icon"></fa-icon>
+                      
                       {{mc.value}}
                     </button>
                   </mat-menu>

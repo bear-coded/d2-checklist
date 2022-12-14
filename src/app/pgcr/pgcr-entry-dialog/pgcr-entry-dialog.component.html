@@ -21,7 +21,7 @@
   <mat-tab-group>
     <mat-tab>
       <ng-template mat-tab-label>
-        <fa-icon [icon]="iconService.fasInfoCircle"></fa-icon><span class="d-none d-md-inline pad-left">Info</span>
+        <span class="d-none d-md-inline pad-left">Info</span>
       </ng-template>
       <div class="tab-body">
         <table class="tidy-auto-table">
@@ -35,7 +35,7 @@
     </mat-tab>
     <mat-tab>
       <ng-template mat-tab-label>
-        <fa-icon [icon]="iconService.farAxeBattle"></fa-icon><span class="d-none d-md-inline pad-left">Weapons</span>
+        <span class="d-none d-md-inline pad-left">Weapons</span>
       </ng-template>
       <div class="tab-body">
         <table class="tidy-auto-table">
@@ -43,7 +43,7 @@
             <th></th>
             <th>Weapon</th>
             <th>Kills</th>
-            <th class="d-none d-md-table-cell"><fa-icon [icon]="iconService.falCrosshairs"></fa-icon></th>
+            <th class="d-none d-md-table-cell"></th>
           </tr>
           <tr *ngFor="let v of entry.weapons">
             <td class="vert-middle">
@@ -59,7 +59,7 @@
     </mat-tab>
     <mat-tab *ngIf="entry.medals.length > 0">
       <ng-template mat-tab-label>
-        <fa-icon [icon]="iconService.farMedal"></fa-icon><span class="d-none d-md-inline pad-left">Medals</span>
+        <span class="d-none d-md-inline pad-left">Medals</span>
       </ng-template>
       <div class="tab-body">
         <table class="tidy-auto-table">

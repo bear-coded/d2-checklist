@@ -37,8 +37,8 @@
                   [style.background-image]="'url(//www.bungie.net' + t.icon + ')'"></div>
                 {{t.name}}
 
-                <fa-icon [icon]="iconService.fasCheckSquare" *ngIf="t.acquired" class="accent-text mat-option.mat-selected"></fa-icon>
-                <fa-icon [icon]="iconService.farSquare" *ngIf="!t.acquired"></fa-icon>
+                
+                
                 <ng-container *ngIf="debugmode|async">{{t.hash}}</ng-container>
                 <br>
                 <span class="simple-caption">

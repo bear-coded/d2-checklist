@@ -46,19 +46,19 @@
                             <mat-menu #itemMenu="matMenu">
                                 <button mat-menu-item *ngIf="i.postmaster"
                                     (click)="parent.pullFromPostmaster(player, i)">
-                                    <fa-icon [icon]="iconService.falEnvelopeOpen"></fa-icon> Pull from postmaster
+                                     Pull from postmaster
                                 </button>
                                 <ng-container *ngIf="!i.postmaster">
                                     <ng-container *ngIf="i.owner|async as owner">
                                         <button mat-menu-item *ngIf="i.canReallyEquip"
                                             (click)="parent.equip(player, i)">
-                                            <fa-icon [icon]="iconService.falTshirt"></fa-icon> Equip on {{owner.label}}
+                                             Equip on {{owner.label}}
                                         </button>
                                     </ng-container>
 
                                     <button mat-menu-item *ngFor="let target of i.options"
                                         (click)="parent.transfer(player, i, target)">
-                                        <fa-icon [icon]="iconService.falExchange"></fa-icon> Transfer to
+                                         Transfer to
                                         {{target.label}}
                                     </button>
                                 </ng-container>
@@ -68,12 +68,12 @@
                                     {{(i.owner|async)?.label}}
 
                                     <span *ngIf="i.postmaster" class="margin-left warn-text">
-                                        <fa-icon [icon]="iconService.fasEnvelope"></fa-icon>
+                                        
                                     </span>
                                 </div>
                                 <div class="flex-shrink">
                                     <a class="fake-link" title="Hide" (click)="hideMe.push(i)">
-                                        <fa-icon [icon]="iconService.falEyeSlash"></fa-icon>
+                                        
                                     </a>
                                 </div>
                             </div>
@@ -122,18 +122,18 @@
                             <button mat-button [ngClass]="['detail-tag-button',i.mark!=null?i.mark:'']"
                                 [matMenuTriggerFor]="menu">
                                 <ng-container *ngIf="i.mark==null">
-                                    <fa-icon [icon]="iconService.fasTags"></fa-icon>&ensp;
+                                    &ensp;
                                     Unmarked
                                 </ng-container>
                                 <ng-container *ngIf="i.mark!=null">
-                                    <fa-icon [icon]="parent.markService.markDict[i.mark].icon"></fa-icon>&ensp;
+                                    &ensp;
                                     {{i.markLabel}}
                                 </ng-container>
                             </button>
                             <mat-menu #menu="matMenu">
                                 <ng-container *ngFor="let mc of parent.markService.markChoices">
                                     <button *ngIf="mc.value!=i.mark" mat-menu-item (click)="parent.mark(mc.value,i)">
-                                        <fa-icon [icon]="mc.icon"></fa-icon>&ensp;
+                                        &ensp;
                                         {{mc.label}}
                                     </button>
                                 </ng-container>
@@ -182,7 +182,7 @@
                                 </div>
                                 <div *ngIf="t.percent==100" class="margin-top-10 fake-link simple-caption"
                                     [routerLink]="['/',player.profile.userInfo.membershipType, player.profile.userInfo.membershipId, 'triumphs','tree',t.hash]">
-                                    Recipe <fa-icon class="pad-left" [icon]="iconService.fasCheck"></fa-icon>
+                                    Recipe 
                                 </div>
                             </ng-container>
                         </td>

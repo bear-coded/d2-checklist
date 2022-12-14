@@ -3,9 +3,8 @@
   <div *ngIf="triumph.objectives?.length>0">
     Objectives:
     <div class="low-hanging-desc objective" *ngFor="let o of triumph.objectives">
-      <fa-icon [icon]="iconService.fasCheckSquare" *ngIf="o.complete" class="accent-text mat-option.mat-selected">
-      </fa-icon>
-      <fa-icon [icon]="iconService.farSquare" *ngIf="!o.complete"></fa-icon>
+      
+      
       {{o.progress|number}}/{{o.completionValue|number}} {{o.progressDescription}}
       <span *ngIf="o.score"> - {{o.score}} pts</span>
       <mat-progress-bar *ngIf="o.progress*100/o.completionValue < 100"class="pres-node-prog" mode="determinate" [value]="o.progress*100/o.completionValue">

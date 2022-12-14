@@ -7,14 +7,7 @@ import {
     TagValue
 } from '@destinyitemmanager/dim-api-types';
 import { environment } from '@env/environment';
-import { IconDefinition } from '@fortawesome/pro-light-svg-icons';
-import { faCabinetFiling } from '@fortawesome/pro-regular-svg-icons';
-import {
-    faBan,
-    faBolt,
-    faHeart,
-    faSave as fasSave
-} from '@fortawesome/pro-solid-svg-icons';
+
 import { format } from 'date-fns';
 import * as LZString from 'lz-string';
 import { BehaviorSubject, Subject } from 'rxjs';
@@ -218,27 +211,27 @@ export class MarkService implements OnDestroy {
         a.push({
             label: 'Upgrade',
             value: 'upgrade',
-            icon: faHeart,
+            icon: null,
         });
         a.push({
             label: 'Keep',
             value: 'keep',
-            icon: fasSave,
+            icon: null,
         });
         a.push({
             label: 'Infuse',
             value: 'infuse',
-            icon: faBolt,
+            icon: null,
         });
         a.push({
             label: 'Junk',
             value: 'junk',
-            icon: faBan,
+            icon: null,
         });
         a.push({
             label: 'Archive',
             value: 'archive',
-            icon: faCabinetFiling,
+            icon: null,
         });
         return a;
     }
@@ -649,7 +642,7 @@ export interface Marks {
 export interface MarkChoice {
     label: string;
     value: string;
-    icon: IconDefinition;
+    icon: null;
 }
 
 interface SaveResult {

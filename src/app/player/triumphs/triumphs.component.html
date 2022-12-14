@@ -1,25 +1,25 @@
 <ng-container *ngIf="state.player|async as player">
   <nav mat-tab-nav-bar color="accent">    
     <a mat-tab-link routerLink="tree" routerLinkActive #rla1="routerLinkActive" [active]="rla1.isActive">
-      <fa-icon [icon]="iconService.farTrophy"></fa-icon><span class="d-none d-md-inline">&ensp;Triumphs</span>
+      <span class="d-none d-md-inline">&ensp;Triumphs</span>
     </a>   
     <a mat-tab-link routerLink="patterns" routerLinkActive #rla7="routerLinkActive" [active]="rla7.isActive">
-      <fa-icon [icon]="iconService.fasHammerCrash"></fa-icon><span class="d-none d-md-inline">&ensp;Patterns</span>
+      <span class="d-none d-md-inline">&ensp;Patterns</span>
     </a>
     <a mat-tab-link routerLink="catalysts" routerLinkActive #rla8="routerLinkActive" [active]="rla8.isActive">
-      <fa-icon [icon]="iconService.fasLevelUp"></fa-icon><span class="d-none d-md-inline">&ensp;Catalysts</span>
+      <span class="d-none d-md-inline">&ensp;Catalysts</span>
     </a>
     <a mat-tab-link routerLink="seals" routerLinkActive #rla3="routerLinkActive" [active]="rla3.isActive">
-      <fa-icon [icon]="iconService.farAward"></fa-icon><span class="d-none d-md-inline">&ensp;Seals</span>
+      <span class="d-none d-md-inline">&ensp;Seals</span>
     </a>
     <a mat-tab-link routerLink="closest" routerLinkActive #rla4="routerLinkActive" [active]="rla4.isActive">
-        <fa-icon [icon]="iconService.farPercent"></fa-icon><span class="d-none d-md-inline">&ensp;Closest</span>
+        <span class="d-none d-md-inline">&ensp;Closest</span>
     </a>
     <a mat-tab-link routerLink="search" routerLinkActive #rla5="routerLinkActive" [active]="rla5.isActive">
-      <fa-icon [icon]="iconService.farSearch"></fa-icon><span class="d-none d-md-inline">&ensp;Search</span>
+      <span class="d-none d-md-inline">&ensp;Search</span>
     </a>
     <a mat-tab-link routerLink="tracked" routerLinkActive #rla6="routerLinkActive" [active]="rla6.isActive">
-        <fa-icon [icon]="iconService.farThumbtack"></fa-icon><span class="d-none d-md-inline">&ensp;Tracked</span>
+        <span class="d-none d-md-inline">&ensp;Tracked</span>
     </a>
     
   </nav>

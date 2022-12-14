@@ -2,7 +2,7 @@
 <div class="nav-toggles-container">
     <div class="nav-toggles char-row">
         <button mat-icon-button (click)="refresh.emit()">
-            <fa-icon [icon]="iconService.fasSyncAlt"></fa-icon>  <!--[spin]="vendorsLoading"-->
+              <!--[spin]="vendorsLoading"-->
           </button>
         <mat-button-toggle-group class="chars-toggle" *ngIf="player?.characters" [value]="char$|async"
             (change)="char$.next($event.value); charIdSelect.emit($event.value.characterId)">
@@ -14,7 +14,7 @@
     </div>
     <mat-button-toggle-group class="nav-toggles" [value]="option$|async" (change)="option$.next($event.value); tabSelect.emit($event.value.text)">
         <mat-button-toggle *ngFor="let o of options" [value]="o">
-            <fa-icon [icon]="o.icon"></fa-icon>
+            
             <span class="d-none d-md-inline"> {{o.text}}</span>
         </mat-button-toggle>
     </mat-button-toggle-group>
@@ -76,17 +76,14 @@
                                                 *ngIf="i.lowLinks!=null && i.lowLinks.mapLink!=null" target="_blank"
                                                 rel="noopener">
                                                 {{i.name}}
-                                                <fa-icon [icon]="iconService.farMapMarkerAlt" class="accent-text">
-                                                </fa-icon>
+                                                
                                             </a>
                                         </div>
 
                                         <div class="type-caption">{{i.typeName}}</div>
                                     </div>
                                     <div class="bounty-shopping-cart">
-                                        <fa-icon [icon]="iconService.falShoppingCart"
-                                            [class.accent-text]="shoppingListHashes[i.hash]"
-                                            [class.disabled-text]="!shoppingListHashes[i.hash]"></fa-icon>
+                                        
                                     </div>
                                 </div>
                                 <div class="mobile-bounty-tags" *ngIf="i.vendorItemInfo?.tags as tags">

@@ -69,13 +69,12 @@
                                     <td colspan="3">
                                         {{p.searchResult.displayName}}
                                         <ng-container *ngIf="p.errMsg == null">
-                                            <fa-icon [icon]="iconService.farSpinner" [pulse]="true"
-                                                [fixedWidth]="true"></fa-icon>
+                                            
                                         </ng-container>
                                         <ng-container *ngIf="p.errMsg != null">
                                             <span class="fake-link" style="margin-left:0.25em"
                                                 (click)="loadPlayer(player.profile.userInfo.membershipType, p)">
-                                                &ensp;<fa-icon [icon]="iconService.fasSync"></fa-icon>
+                                                &ensp;
                                             </span>
                                             <div class='simple-warn-caption'>{{p.errMsg}}</div>
                                         </ng-container>

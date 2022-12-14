@@ -11,7 +11,7 @@
           <mat-panel-title [class.accent-text]="s.complete">
             <div *ngIf="s.icon!=null" class="seal-icon"
               [style.background-image]="'url(//www.bungie.net' + s.icon + ')'"></div>
-              <fa-icon class="pad-right" *ngIf="s.gildTotal>0 && s.gildProgress>=s.gildTotal" [icon]="iconService.fadShieldAlt" matTooltip="Gilded!"></fa-icon> {{s.title}}           
+               {{s.title}}           
             <ng-container *ngIf="debugmode|async">{{s.hash}}</ng-container>
           </mat-panel-title>
           <mat-panel-description [class.accent-text]="s.complete">
@@ -25,26 +25,23 @@
               <ng-container *ngFor="let c of s.children">
                 <tr *ngIf="!state.hideCompleteTriumphs || !c.complete || !c.redeemed">
                   <td>
-                    <fa-icon [icon]="iconService.fasCheckSquare" *ngIf="c.complete && c.redeemed"
-                      class="accent-text mat-option.mat-selected"></fa-icon>
+                    
 
-                    <fa-icon [icon]="iconService.fasCheckSquare" *ngIf="c.complete && !c.redeemed"
-                      class="warn-text mat-option.mat-selected"></fa-icon>
-                    <fa-icon [icon]="iconService.farSquare" *ngIf="!c.complete"></fa-icon>
+                    
+                    
 
-                    <fa-icon *ngIf="c.forTitleGilding" class="pad-left pad-right accent-text" [icon]="iconService.fadShieldAlt" matTooltip="For title guilding"></fa-icon>
+                    
                     {{c.name}}
                     
                     <ng-container *ngIf="c.lowLinks!=null">                      
-                      <a [href]="c.lowLinks.mapLink" class="pad-left" *ngIf="c.lowLinks.mapLink!=null && c.lowLinks.mapLink!=null" target="_blank" rel="noopener"> <fa-icon [icon]="iconService.farMapMarkerAlt" class="accent-text"></fa-icon> </a>
-                      <a [href]="c.lowLinks.loreLink" class="pad-left" *ngIf="c.lowLinks.loreLink!=null && c.lowLinks.loreLink.length>1" target="_blank" rel="noopener"> <fa-icon [icon]="iconService.fasBookSpells"></fa-icon></a>
-                      <a [href]="c.lowLinks.videoLink" class="pad-left" *ngIf="c.lowLinks.videoLink!=null && c.lowLinks.videoLink.length>1" target="_blank" rel="noopener"> <fa-icon [icon]="iconService.fabYoutube"></fa-icon></a>
+                      <a [href]="c.lowLinks.mapLink" class="pad-left" *ngIf="c.lowLinks.mapLink!=null && c.lowLinks.mapLink!=null" target="_blank" rel="noopener">  </a>
+                      <a [href]="c.lowLinks.loreLink" class="pad-left" *ngIf="c.lowLinks.loreLink!=null && c.lowLinks.loreLink.length>1" target="_blank" rel="noopener"> </a>
+                      <a [href]="c.lowLinks.videoLink" class="pad-left" *ngIf="c.lowLinks.videoLink!=null && c.lowLinks.videoLink.length>1" target="_blank" rel="noopener"> </a>
                     </ng-container>
                     
                     <ng-container *ngIf="debugmode|async">{{c.hash}}</ng-container>
-                    <fa-icon class="pad-left" [icon]="iconService.farStar" *ngIf="state.dTrackedTriumphIds[c.hash]!=true"
-                      (click)="state.trackTriumph(c)"></fa-icon>
-                    <fa-icon class="pad-left accent-text" [icon]="iconService.fasStar" *ngIf="state.dTrackedTriumphIds[c.hash]==true" (click)="state.untrackTriumph(c)"></fa-icon>                                         
+                    
+                                                             
                     <br>
                     <span class="simple-warn-caption" *ngIf="c.complete && !c.redeemed">
                       Not yet redeemed.<br></span>
@@ -61,9 +58,8 @@
                     </div>
                     <div *ngFor="let o of c.objectives">
                       <span class="simple-caption">
-                        <fa-icon [icon]="iconService.fasCheckSquare" *ngIf="o.complete"
-                          class="accent-text mat-option.mat-selected"></fa-icon>
-                        <fa-icon [icon]="iconService.farSquare" *ngIf="!o.complete"></fa-icon>
+                        
+                        
                         {{o.progress}}/{{o.completionValue}} {{o.progressDescription}}
                       </span>
                       <mat-progress-bar class="pres-node-prog" mode="determinate"

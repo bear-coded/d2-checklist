@@ -15,19 +15,19 @@
 
     </div>
     <a mat-button [matMenuTriggerFor]="currencyMenu">
-        <fa-icon [icon]="iconService.fasEllipsisV"></fa-icon>
+        
     </a>
     <mat-menu #currencyMenu="matMenu">
         
         <ng-container *ngTemplateOutlet="subMenu; context: {currencies: currencies, ctype: CurrencyType.Basic}"></ng-container>     
         <button mat-menu-item [matMenuTriggerFor]="upgradeMenu">
-            <fa-icon [icon]="iconService.fasLevelUp"></fa-icon>&ensp;Upgrade
+            &ensp;Upgrade
         </button>
         <button mat-menu-item [matMenuTriggerFor]="craftMenu">
-            <fa-icon [icon]="iconService.fasHammerCrash"></fa-icon>&ensp;Craft
+            &ensp;Craft
         </button>
         <button mat-menu-item [matMenuTriggerFor]="cosmeticMenu">
-            <fa-icon [icon]="iconService.fasShirt"></fa-icon>&ensp;Cosmetic
+            &ensp;Cosmetic
         </button>
         <!-- <button mat-menu-item *ngFor="let c of currencies">
             <div class='flex-row'>
@@ -60,7 +60,7 @@
     <button mat-menu-item>
         <div class='flex-row' [matTooltip]="item.name">
             <span class="currency-icon" [style.background-image]="'url(//www.bungie.net' + item.icon + ')'"></span>            
-            <span class="currency-text">{{item.count|number}} <fa-icon *ngIf="item.count>=item.maxStackSize" class="pad-left warn-text" [icon]="iconService.fasTriangleExclamation"></fa-icon></span>
+            <span class="currency-text">{{item.count|number}} </span>
             
         </div>
     </button>

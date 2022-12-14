@@ -25,14 +25,14 @@
               </mat-form-field>
               <div class="filter-row">
                 <button mat-button>
-                  <fa-icon [icon]="iconService.fasSyncAlt" (click)="state.refresh()"></fa-icon>
+                  
                 </button>
                 <mat-checkbox (change)="state.filterUpdated$.next()" [(ngModel)]="state.hideTrials">Hide
                   Trials</mat-checkbox>
                 <button mat-button *ngIf="(state.filtersDirty$|async)" (click)="state.resetFilters()">
                   <fa-stack>
-                    <fa-icon [icon]="iconService.fasFilter" stackItemSize="1x"></fa-icon>
-                    <fa-icon [icon]="iconService.fasBan" stackItemSize="2x" class="warn-text"></fa-icon>
+                    
+                    
                   </fa-stack>
                 </button>
                 <d2c-signed-on-loading-icon class="loading-indicator"></d2c-signed-on-loading-icon>

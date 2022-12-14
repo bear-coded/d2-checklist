@@ -38,14 +38,14 @@
                 <div class="utility-download">
 
                     <button mat-stroked-button (click)="exportTagsToFile()">
-                        <fa-icon [icon]="iconService.falDownload"></fa-icon>
+                        
                         Backup tags to file
                     </button>
 
                     <input #importInput hidden="true" type="file" onclick="this.value=null"
                         (change)="importTagsFromFile($event)" accept=".json" />
                     <button mat-stroked-button (click)="importInput.click()">
-                        <fa-icon [icon]="iconService.falUpload"></fa-icon>
+                        
                         Import tags from file
                     </button>
                 </div>                
@@ -63,7 +63,7 @@
             <hr style="width: 90%">
             <div class="utility-body">
                 <a mat-stroked-button routerLink="perkbench">
-                    <fa-icon [icon]="iconService.farTools"></fa-icon>
+                    
                     Edit god rolls at the PerkBench
                 </a>
             </div>

@@ -2,7 +2,7 @@
     <h2 mat-dialog-title>Upgrade Mode
 
         <button mat-button (click)="parent.load()">
-            <fa-icon [icon]="iconService.fasSyncAlt" [spin]="operating$|async"></fa-icon>
+            
         </button>
 
     </h2>
@@ -28,13 +28,13 @@
                         <th></th>
                         <th>Weapon</th>
                         <th matTooltip="Number of items tagged as infusion fodder">
-                            <fa-icon [icon]="iconService.fasBolt" [fixedWidth]="true"></fa-icon>
+                            
                         </th>
                         <th matTooltip="Items in the active char inventory">
-                            <fa-icon [icon]="iconService.fasHome"></fa-icon>
+                            
                         </th>
                         <th matTooltip="Items that need to be moved">
-                            <fa-icon [icon]="iconService.fasSuitcase"></fa-icon>
+                            
                         </th>
                     </tr>
                     <tr *ngFor="let tuple of data.weapons">
@@ -51,9 +51,9 @@
                     <tr>
                         <th></th>
                         <th>Armor</th>
-                        <th matTooltip="Number of items tagged as infusion fodder"><fa-icon [icon]="iconService.fasBolt" [fixedWidth]="true"></fa-icon></th>
-                        <th matTooltip="Items in the active char inventory"><fa-icon [icon]="iconService.fasHome"></fa-icon></th>
-                        <th matTooltip="Items that need to be moved"><fa-icon [icon]="iconService.fasSuitcase"></fa-icon></th>
+                        <th matTooltip="Number of items tagged as infusion fodder"></th>
+                        <th matTooltip="Items in the active char inventory"></th>
+                        <th matTooltip="Items that need to be moved"></th>
                     </tr>
                     <tr *ngFor="let tuple of data.armor">
                         <td><d2c-manifest-item-icon [desc]="tuple.desc" [small]="true"></d2c-manifest-item-icon></td>

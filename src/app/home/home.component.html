@@ -12,25 +12,25 @@
   <div class="home-button-row">
 
     <a mat-raised-button class="home-button" color="accent" target="_blank" href="https://amzn.to/3E1Mm6s">
-      <fa-icon [icon]="iconService.fabAmazon"></fa-icon> Grimoire Anthology, Vol IV
+       Grimoire Anthology, Vol IV
     </a>
     <a mat-raised-button class="home-button" color="primary" target="_blank"
       href="https://www.youtube.com/channel/UCbpQ7BKU32m6J9jI2O8z09w">
-      <fa-icon [icon]="iconService.fabYoutube"></fa-icon> Video tutorials
+       Video tutorials
     </a>
     <ng-container *ngIf="favoritesList$|async as fl">
       <ng-container *ngIf="fl.length>0; else noFriends">
         <a mat-raised-button class="home-button" color="primary" [matMenuTriggerFor]="friendsMenu"
           [matBadge]="fl.length" matBadgePosition="after" matBadgeColor="warn">
-          <fa-icon [icon]="iconService.fasHeart"></fa-icon> Friends
+           Friends
         </a>
 
         <mat-menu #friendsMenu="matMenu">
           <a mat-menu-item [routerLink]="['/','friends']" color="primary">
-            <fa-icon [icon]="iconService.farList"></fa-icon> Show all
+             Show all
           </a>
           <a *ngFor="let ui of fl" mat-menu-item [routerLink]="['/',ui.membershipType, ui.membershipId]">
-            <fa-icon [icon]="platformMap[ui.membershipType].icon"></fa-icon> {{ui.displayName}}
+             {{ui.displayName}}
           </a>
 
         </mat-menu>
@@ -39,7 +39,7 @@
 
         <button mat-raised-button disabled class="home-button" color="primary"
           matTooltip="Click the heart icon on player pages to save friends">
-          <fa-icon [icon]="iconService.fasHeart"></fa-icon> Friends
+           Friends
         </button>
 
       </ng-template>
@@ -52,7 +52,7 @@
 </div>
 <p *ngIf="(isSignedOn$|async) === false">
   <button mat-stroked-button (click)="logon()">
-    <fa-icon [icon]="iconService.fasSignInAlt"></fa-icon> Sign In
+     Sign In
   </button> to see bounty availabilities (this requires a private endpoint that doesn't work otherwise)
 </p>
 <mat-card *ngIf="isSignedOn$|async">
@@ -113,9 +113,7 @@
 
         <mat-list>
           <mat-list-item>
-            <a *ngIf="rc.video" [href]="rc.video" target="_blank" rel="noopener"> {{rc.desc}} <fa-icon
-                [icon]="iconService.fabYoutube" class="accent-text">
-              </fa-icon>
+            <a *ngIf="rc.video" [href]="rc.video" target="_blank" rel="noopener"> {{rc.desc}} 
             </a>
           </mat-list-item>
         </mat-list>
@@ -129,7 +127,7 @@
             <div>Lost Sectors </div>
             <div>
               <button class="pad-left-more" mat-stroked-button (click)="showLostSectorNextDays()">
-                <fa-icon class="pad-right" [icon]="iconService.farCalendar"></fa-icon> Next 30 Days
+                 Next 30 Days
               </button>
             </div>
           </div>
@@ -260,7 +258,7 @@
               {{today.wellWeapon.itemTypeDisplayName}}</span>
             <a href="https://imgur.com/a/TyK5MHx" target="_blank" rel="noopener">
               {{today.wellWeapon.displayProperties.name}}
-              &nbsp;<fa-icon [icon]="iconService.fasInfoCircle" class="accent-text"></fa-icon></a>
+              &nbsp;</a>
           </mat-list-item>
         </mat-list>
       </mat-card-content>
@@ -277,7 +275,7 @@
             <a href="https://docs.google.com/spreadsheets/d/1VXPqxaD9pKuOfTYO-aNp_NiQ_032bdltsCQ2JG4FbJM/htmlview?sle=true#gid=0"
               target="_blank" rel="noopener">
               {{today.altarOfSorrowsWeapon.displayProperties.name}}
-              &nbsp;<fa-icon [icon]="iconService.fasInfoCircle" class="accent-text"></fa-icon></a>
+              &nbsp;</a>
           </mat-list-item>
         </mat-list>
       </mat-card-content>
@@ -292,8 +290,7 @@
           <mat-list-item>
             <span class="simple-caption-no-margin right-margin">Ascendant Challenge</span>
             <a [href]="today.week.ascendantVideo" target="_blank" rel="noopener">
-              {{today.week.ascendantChallenge}} <fa-icon [icon]="iconService.fabYoutube" class="accent-text">
-              </fa-icon>
+              {{today.week.ascendantChallenge}} 
             </a>
           </mat-list-item>
           <mat-list-item><span class="simple-caption-no-margin right-margin">Location</span>
@@ -330,6 +327,6 @@
   <mat-option *ngFor="let v of elasticSearchService.filteredAutoCompleteOptions$|async" [value]="v">
     
     <img class="option-img" aria-hidden [src]="'https://www.bungie.net' + v.iconPath " height="36">
-    {{v.displayName}} <fa-icon [icon]="platformMap[v.membershipType].icon"></fa-icon> <span class="pad-left simple-caption-darker-no-margin">{{v.lastPlayed|d2cAgoHumanized}}</span> 
+    {{v.displayName}}  <span class="pad-left simple-caption-darker-no-margin">{{v.lastPlayed|d2cAgoHumanized}}</span> 
   </mat-option>
 </mat-autocomplete>

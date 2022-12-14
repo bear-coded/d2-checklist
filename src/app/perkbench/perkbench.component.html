@@ -12,19 +12,19 @@
             <mat-card-content class="align-left flex-column">
                 <div>
                     <button mat-stroked-button (click)="exportToFile()">
-                        <fa-icon [icon]="iconService.falDownload"></fa-icon>
+                        
                         Save JSON to file
                     </button>
                 </div>
                 <div>
                     <button mat-stroked-button (click)="applyCurrentRolls()">
-                        <fa-icon [icon]="iconService.fasSave"></fa-icon>
+                        
                         Apply Current Rolls
                     </button>
                 </div>
                 <div>
                     <button *ngIf="customGodRollsApplied$|async" mat-stroked-button (click)="clearCustomRolls()">
-                        <fa-icon [icon]="iconService.fasBan"></fa-icon>
+                        
                         Clear Applied Custom Rolls
                     </button>
                 </div>
@@ -47,13 +47,13 @@
                     <input #importInput hidden="true" type="file" onclick="this.value=null"
                         (change)="importFromFile($event)" accept=".json" />
                     <button mat-stroked-button (click)="importInput.click()">
-                        <fa-icon [icon]="iconService.falUpload"></fa-icon>
+                        
                         Load JSON from file
                     </button>
                 </div>
                 <div>
                     <button mat-stroked-button (click)="loadOfficialRolls()">
-                        <fa-icon [icon]="iconService.falCloudDownload"></fa-icon>
+                        
                         Reload Official JSON
                     </button>
                 </div>
@@ -95,8 +95,8 @@
         <div class="spaced align-left">
             <mat-button-toggle-group [(ngModel)]="isController" (change)="changeConsole();filterChanged$.next(true)"
                 aria-label="Font Style">
-                <mat-button-toggle [value]="false">MnK <fa-icon *ngIf="!isController" class="pad-left" [icon]="iconService.fasCheck"></fa-icon></mat-button-toggle>
-                <mat-button-toggle [value]="true">Console <fa-icon *ngIf="isController" class="pad-left" [icon]="iconService.fasCheck"></fa-icon></mat-button-toggle>
+                <mat-button-toggle [value]="false">MnK </mat-button-toggle>
+                <mat-button-toggle [value]="true">Console </mat-button-toggle>
             </mat-button-toggle-group>
             <mat-form-field>
                 <mat-label>Wildcard Search</mat-label>
@@ -151,11 +151,9 @@
                         <td>{{r.info.damage}}</td>
                         <td>{{r.info.season}} - {{r.info.seasonDesc}}</td>
                         <td>
-                            <fa-icon
-                                *ngIf="r.roll == null || (isController ? r.roll.controller == null : r.roll.mnk == null); else hasRoll"
-                                [icon]="iconService.farSquare"></fa-icon>
+                            
                             <ng-template #hasRoll>
-                                <fa-icon *ngIf="r.roll!=null" [icon]="iconService.fasCheckSquare"></fa-icon>
+                                
                             </ng-template>
                         </td>
                     </tr>

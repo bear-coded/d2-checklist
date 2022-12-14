@@ -3,7 +3,7 @@ import { DestinyCacheService } from '@app/service/destiny-cache.service';
 import { IconService } from '@app/service/icon.service';
 import { MarkService } from '@app/service/mark.service';
 import { ApiInventoryBucket, ApiItemTierType, ClassAllowed, DamageType, DestinyAmmunitionType, EnergyType, InventoryItem, InventoryStat, ItemType, NumComparison, Player } from '@app/service/model';
-import { IconDefinition } from '@fortawesome/free-brands-svg-icons';
+
 import { BehaviorSubject, combineLatest, Subject } from 'rxjs';
 import { Action } from 'rxjs/internal/scheduler/Action';
 import { debounceTime, takeUntil } from 'rxjs/operators';
@@ -1004,7 +1004,7 @@ export class GearFilterStateService implements OnDestroy {
 export interface ToggleConfig {
   title: string;
   debugKey: string;
-  icon?: IconDefinition;
+  icon?: null;
   iconClass?: string;
   displayTabs: ItemType[];
   wildcard?: boolean;

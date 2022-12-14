@@ -11,7 +11,7 @@
             </mat-button-toggle>
           </mat-button-toggle-group>
           <button mat-button>
-            <fa-icon [icon]="iconService.fasSyncAlt" (click)="state.refresh()"></fa-icon>
+            
           </button>
           <mat-checkbox class="margin-5" (change)="state.filterUpdated$.next()" [(ngModel)]="state.hideComplete">Hide
             Complete</mat-checkbox>

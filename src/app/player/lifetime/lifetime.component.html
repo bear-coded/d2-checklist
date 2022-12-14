@@ -23,7 +23,7 @@
     </ng-container>
     <ng-template #loading>
         <h1>
-            <fa-icon [icon]="iconService.farSpinner" [pulse]="true" [fixedWidth]="true"></fa-icon>
+            
         </h1>
     </ng-template>
 </div>
@@ -48,7 +48,7 @@
                     <td class="lead">
                         <span *ngIf="a.special" matTooltip="Weekly Nightfall">
                             <b>{{a.name}}</b>
-                            <fa-icon [icon]="iconService.fasCalendarStar" class="pad-left accent-text"></fa-icon>
+                            
                         </span>
                         <span *ngIf="!a.special">
                             {{a.name}}

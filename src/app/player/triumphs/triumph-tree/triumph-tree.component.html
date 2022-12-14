@@ -2,10 +2,10 @@
   <h4 class="triumph-score">Triumphs - Score: {{player.triumphScore|number : '2.0-0'}}
     <button class="hide-complete-triumphs" mat-button (click)="downloadCsvTriumphs()">
 
-      <fa-icon [icon]="iconService.falDownload"></fa-icon> CSV
+       CSV
     </button>
     <button class="hide-complete-triumphs" mat-button (click)="sumTriumphs()">
-      <fa-icon [icon]="iconService.falSigma"></fa-icon>
+      
     </button>
     <mat-checkbox class="hide-complete-triumphs" [(ngModel)]="state.hideCompleteTriumphs">
       Hide Completed
@@ -29,37 +29,33 @@
         <div class="record" [class.warn-text]="node.data.hash == selectedTreeNodeHash"
           [id]="'tree-node-'+node.data.hash">
 
-          <fa-icon [icon]="iconService.fasCheckSquare" *ngIf="node.data.complete && node.data.redeemed"
-            class="accent-text mat-option.mat-selected"></fa-icon>
+          
 
-          <fa-icon [icon]="iconService.fasCheckSquare" *ngIf="node.data.complete && !node.data.redeemed"
-            class="warn-text mat-option.mat-selected"></fa-icon>
-          <fa-icon [icon]="iconService.farSquare" *ngIf="!node.data.complete"></fa-icon>
+          
+          
 
           {{node.data.name}}
           <span *ngIf="node.data.lowLinks!=null" class="low-links">
             <a [href]="node.data.lowLinks.mapLink" class="pad-left"
               *ngIf="node.data.lowLinks.mapLink!=null && node.data.lowLinks.mapLink!=null" target="_blank"
               rel="noopener">
-              <fa-icon [icon]="iconService.farMapMarkerAlt" class="accent-text"></fa-icon>
+              
             </a>
             <a [href]="node.data.lowLinks.loreLink" class="pad-left"
               *ngIf="node.data.lowLinks.loreLink!=null && node.data.lowLinks.loreLink.length>1" target="_blank"
               rel="noopener">
-              <fa-icon [icon]="iconService.fasBookSpells"></fa-icon>
+              
             </a>
             <a [href]="node.data.lowLinks.videoLink" class="pad-left"
               *ngIf="node.data.lowLinks.videoLink!=null && node.data.lowLinks.videoLink.length>1" target="_blank"
               rel="noopener">
-              <fa-icon [icon]="iconService.fabYoutube"></fa-icon>
+              
             </a>
           </span>
 
           <ng-container *ngIf="debugmode|async">{{node.data.hash}}</ng-container>
-          <fa-icon class="pad-left" [icon]="iconService.farStar" *ngIf="state.dTrackedTriumphIds[node.data.hash]!=true"
-            (click)="state.trackTriumph(node.data)"></fa-icon>
-          <fa-icon class="pad-left" [icon]="iconService.fasStar" *ngIf="state.dTrackedTriumphIds[node.data.hash]==true"
-            class="accent-text" (click)="state.untrackTriumph(node.data)"></fa-icon>
+          
+          
           <br>
           <span class="simple-warn-caption" *ngIf="node.data.complete && !node.data.redeemed">Not yet
             redeemed.<br></span>
@@ -82,9 +78,8 @@
       <div *ngIf="node.data.icon!=null" class="transparent-icon transparent-branch-icon"
         [style.background-image]="'url(//www.bungie.net' + node.data.icon + ')'"></div>
       <div class="left">
-        <fa-icon [icon]="iconService.fasCheckSquare" *ngIf="node.data.complete"
-          class="accent-text mat-option.mat-selected"></fa-icon>
-        <fa-icon [icon]="iconService.farSquare" *ngIf="!node.data.complete"></fa-icon>
+        
+        
         {{node.data.name}} <span *ngIf="debugmode|async">{{node.data.hash}}</span>
         <span class="simple-caption">
           <span class="padded">{{node.data.progress}}/{{node.data.completionValue}}</span>
@@ -96,9 +91,7 @@
         </ng-container>
         <span class="cv-caption" [class.cv-complete]="node.data.vaultedChildrenComplete==node.data.vaultedChildren"
           *ngIf="node.data.vaultedChildren" matTooltip="Includes triumphs that will be vaulted next season">
-          {{node.data.vaultedChildrenComplete}} / {{node.data.vaultedChildren}} <fa-icon class="pad-left"
-            [class.warn-text]="node.data.vaultedChildrenComplete<node.data.vaultedChildren"
-            [icon]="iconService.fadHourGlassHalf"></fa-icon>
+          {{node.data.vaultedChildrenComplete}} / {{node.data.vaultedChildren}} 
         </span>
         <br>
 

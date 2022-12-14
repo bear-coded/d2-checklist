@@ -1,14 +1,14 @@
 <h2>Friends</h2>
 <div class="info centerMe">
   <section class="body-2" style="text-align: left">To select friends, browse players on the site and click the
-    <fa-icon [icon]="iconService.farHeart" style="font-weight: normal !important"></fa-icon>
+    
     so that it looks like this <span class="warn-text">
-      <fa-icon [icon]="iconService.farHeart" style="font-weight: normal !important"></fa-icon>
+      
     </span>.
   </section>
   <div class="button-row">
     <a mat-button (click)="load()">
-      <fa-icon [icon]="iconService.fasSyncAlt"></fa-icon> Refresh
+       Refresh
     </a>
     <a mat-button (click)="showAllMilestones()" *ngIf="(hiddenMilestones|async).length>0">Show Hidden
       Milestones</a>
@@ -33,7 +33,7 @@
               <span *ngIf="debugmode|async">{{mileStoneName.key}}</span>
               <span matTooltip="Hide this milestone, click Restore Hidden to restore it later"
                 class="fake-link milestoneVisibilityButton" (click)="hideMilestone(mileStoneName.key)">
-                <fa-icon [icon]="iconService.falEyeSlash"></fa-icon>
+                
               </span>
             </th>
           </ng-container>
@@ -49,11 +49,11 @@
           
           <span class="fake-link" style="margin-left:0.25em" *ngIf="(member.player$|async)==null"
             (click)="loadPlayer(member)">
-            &ensp;<fa-icon [icon]="iconService.fasSync"></fa-icon>
+            &ensp;
           </span>
           <span style="margin-left:0.25em" class="warn-text fake-link"
             (click)="storageService.toggleFav(member.user, member.bungieMembershipId)">
-            <fa-icon [icon]="iconService.farTimes" style="font-weight: normal !important"></fa-icon>
+            
           </span>
 
           <ng-container *ngIf="member.player$|async as player">
@@ -63,8 +63,7 @@
                 <br>
                 {{player.profile.dateLastPlayed|d2cAgoHumanized}}
                 <br>
-                {{player.triumphScore|number : '2.0-0'}} <fa-icon [icon]="iconService.falTrophy">
-                </fa-icon>
+                {{player.triumphScore|number : '2.0-0'}} 
               </span>
             </ng-container>
           </ng-container>
@@ -89,7 +88,7 @@
                     matTooltip="Hide this milestone, click Restore Hidden to restore it later"
                     class="mobileVisibilityButton responsive-table-inline-mobile-only"
                     (click)="hideMilestone(mileStoneName.key)">
-                    <fa-icon [icon]="iconService.falEyeSlash"></fa-icon>
+                    
                   </span>
                 <ng-container *ngFor="let char of player.characters">
                   <d2c-milestone-check [milestone]="char.milestones[mileStoneName.key]">

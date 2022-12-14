@@ -33,7 +33,6 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatTreeModule } from '@angular/material/tree';
 import { RouterModule } from '@angular/router';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { ItemEnergyIndicatorComponent } from './item-energy-indicator/item-energy-indicator.component';
 import { ItemIconComponent } from './item-icon/item-icon.component';
@@ -62,7 +61,6 @@ import { CharacterPursuitDialogComponent } from './character-pursuit-dialog/char
     PipeModule,
     CommonModule,
     FormsModule,
-    FontAwesomeModule,
     MatButtonModule,
     MatToolbarModule,
     MatSelectModule,
@@ -136,7 +134,6 @@ import { CharacterPursuitDialogComponent } from './character-pursuit-dialog/char
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    FontAwesomeModule,
     MatButtonModule,
     MatButtonToggleModule,
     MatMenuModule,

@@ -1,6 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { IconService } from '@app/service/icon.service';
-import { IconDefinition } from '@fortawesome/free-brands-svg-icons';
 import { BehaviorSubject } from 'rxjs';
 import { MilestoneRow, PursuitRow } from '../uber-list-state.service';
 
@@ -66,7 +65,7 @@ export class UberListToggleComponent {
 export interface UberToggleConfig {
   title: string;
   debugKey: string;
-  icon?: IconDefinition;
+  icon?: null;
   iconClass?: string;
   wildcard?: boolean;
   includeValue(row: MilestoneRow | PursuitRow, state: UberToggleState): boolean;

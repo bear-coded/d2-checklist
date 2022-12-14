@@ -4,7 +4,7 @@
         <mat-tab>
             <ng-template mat-tab-label>
                 
-                <fa-icon [icon]="iconService.fasChartLine"></fa-icon><span class="d-none d-md-inline">&ensp;Chart</span>
+                <span class="d-none d-md-inline">&ensp;Chart</span>
             </ng-template>
             <div class="tab-body">
                 <d2c-clan-lifetime-graph [data]="entry.all"></d2c-clan-lifetime-graph>
@@ -12,7 +12,7 @@
         </mat-tab>
         <mat-tab>
             <ng-template mat-tab-label>
-                <fa-icon [icon]="iconService.farTable"></fa-icon><span
+                <span
                     class="d-none d-md-inline">&ensp;Data&ensp;-</span>&ensp;{{entry.all.length}}
             </ng-template>
             <div class="tab-body">
@@ -23,8 +23,8 @@
                             <th>
                                 <span class="fake-link" (click)="sortData('name')"> Player
                                     <ng-container *ngIf="sort.name=='name'">
-                                        <fa-icon [icon]="iconService.fasSortUp" *ngIf="sort.ascending"></fa-icon>
-                                        <fa-icon [icon]="iconService.fasSortDown" *ngIf="!sort.ascending"></fa-icon>
+                                        
+                                        
                                     </ng-container>
                                 </span>
                             </th>
@@ -32,8 +32,8 @@
                                 <span class="fake-link" (click)="sortData('activityCompletions')">
                                     Completions
                                     <ng-container *ngIf="sort.name=='activityCompletions'">
-                                        <fa-icon [icon]="iconService.fasSortUp" *ngIf="sort.ascending"></fa-icon>
-                                        <fa-icon [icon]="iconService.fasSortDown" *ngIf="!sort.ascending"></fa-icon>
+                                        
+                                        
                                     </ng-container>
                                 </span>
                             </th>
@@ -41,8 +41,8 @@
                                 <span class="fake-link" (click)="sortData('efficiency')">
                                     Efficiency
                                     <ng-container *ngIf="sort.name=='efficiency'">
-                                        <fa-icon [icon]="iconService.fasSortUp" *ngIf="sort.ascending"></fa-icon>
-                                        <fa-icon [icon]="iconService.fasSortDown" *ngIf="!sort.ascending"></fa-icon>
+                                        
+                                        
                                     </ng-container>
                                 </span>
                             </th>
@@ -51,8 +51,8 @@
                                 <span class="fake-link" (click)="sortData('activityBestSingleGameScore')">
                                     Top Personal Score
                                     <ng-container *ngIf="sort.name=='activityBestSingleGameScore'">
-                                        <fa-icon [icon]="iconService.fasSortUp" *ngIf="sort.ascending"></fa-icon>
-                                        <fa-icon [icon]="iconService.fasSortDown" *ngIf="!sort.ascending"></fa-icon>
+                                        
+                                        
                                     </ng-container>
                                 </span>
                             </th>
@@ -61,8 +61,8 @@
                                 <span class="fake-link" (click)="sortData('fastestCompletionMsForActivity')">
                                     Fastest
                                     <ng-container *ngIf="sort.name=='fastestCompletionMsForActivity'">
-                                        <fa-icon [icon]="iconService.fasSortUp" *ngIf="sort.ascending"></fa-icon>
-                                        <fa-icon [icon]="iconService.fasSortDown" *ngIf="!sort.ascending"></fa-icon>
+                                        
+                                        
                                     </ng-container>
                                 </span>
 
@@ -71,8 +71,8 @@
                                 <span class="fake-link" (click)="sortData('activitySecondsPlayed')">
                                     Time Played
                                     <ng-container *ngIf="sort.name=='activitySecondsPlayed'">
-                                        <fa-icon [icon]="iconService.fasSortUp" *ngIf="sort.ascending"></fa-icon>
-                                        <fa-icon [icon]="iconService.fasSortDown" *ngIf="!sort.ascending"></fa-icon>
+                                        
+                                        
                                     </ng-container>
                                 </span>
                             </th>
@@ -80,8 +80,8 @@
                                 <span class="fake-link" (click)="sortData('kd')">
                                     K/D
                                     <ng-container *ngIf="sort.name=='kd'">
-                                        <fa-icon [icon]="iconService.fasSortUp" *ngIf="sort.ascending"></fa-icon>
-                                        <fa-icon [icon]="iconService.fasSortDown" *ngIf="!sort.ascending"></fa-icon>
+                                        
+                                        
                                     </ng-container>
                                 </span>
 

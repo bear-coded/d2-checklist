@@ -1,83 +1,5 @@
 import { Injectable } from '@angular/core';
-import { faAmazon as fabAmazon, faGithub as fabGithub, faPaypal as fabPaypal, faPlaystation as fabPlaystation, faReddit as fabReddit, faSteam as fabSteam, faTwitter as fabTwitter, faWindows as fabWindows, faXbox as fabXbox, faYoutube as fabYoutube } from '@fortawesome/free-brands-svg-icons';
-import {
-  faSquare as farSquare, faCheckSquare as falCheckSquare, faClone as falClone,
-  faLayerGroup as falLayerGroup, faBars as falBars,
-  faCopy as falCopy, faDiceD20 as falDiceD20, faDownload as falDownload, faEnvelope as falEnvelope, faEnvelopeOpen as falEnvelopeOpen,
-  faExchange as falExchange, faEye as falEye, faEyeSlash as falEyeSlash, faGamepad as falGamepad, faSigma as falSigma,
-  faSort as falSort, faSortDown as falSortDown, faSortUp as falSortUp, faTrophy as falTrophy,
-  faSun as falSun, faTshirt as falTshirt, faSkullCow as falSkullCow, faGem as falGem, faHatCowboy as falHatCowboy,
-  faInfoSquare as falInfoSquare,
-  faCrosshairs as falCrosshairs,
-  faBowArrow as falBowArrow,
-  faShoppingCart as falShoppingCart,
 
-  faCalendarAlt as farCalendar,
-  faBolt as falBolt,
-  faWheat as falWheat,
-  faPlusSquare as falPlusSquare, faMinusSquare as falMinusSquare, faUpload as falUpload, faCloudDownload as falCloudDownload
-} from '@fortawesome/pro-light-svg-icons';
-import {
-
-  faAlien as farAlien,
-  faAxeBattle as farAxeBattle, faBadgeCheck as farBadgeCheck, faBookmark as farBookmark, faBalanceScale as farBalanceScale, faCheckSquare as farCheckSquare, faCheckSquare as farCheckSqure, faCog as farCog, faCopy as farCopy, faExternalLink as farExternalLink, faGem as farGem, faGift as farGift, faHeart as farHeart, faHelmetBattle as farHelmetBattle, faInfoSquare as farInfoSquare, faMapMarkerAlt as farMapMarkerAlt, faMedal as farMedal, faMinusSquare as farMinusSquare, faPalette as farPalette, faProjectDiagram as farProjectDiagram, faSearch as farSearch, faSigma as farSigma, faSpinner as farSpinner, faStar as farStar, faSync as farSync, faTable as farTable,
-  faThumbtack as farThumbtack, faTimes as farTimes, faTimesSquare as farTimesSquare, faTrophy as farTrophy, faClipboardCheck as farClipboardCheck, faPercent as farPercent, faAward as farAward,
-  faInfinity as falInfinity,
-  faSwords as falSwords,
-  faScrollOld as falScrollOld,
-  faBan as falBan, faList as farList,
-  faTools as farTools,
-  faSign as farSign
-} from '@fortawesome/pro-regular-svg-icons';
-
-import {
-  faSort as fadSort, faSortDown as fadSortDown, faSortUp as fadSortUp, faArchive as fadArchive,
-  faHourglassHalf as fadHourGlassHalf, faShieldAlt as fadShieldAlt, faVault as fadVault,
- } from '@fortawesome/pro-duotone-svg-icons';
-import {
-  faPlug as fasPlug, 
-  faGamepadAlt as fasGamepadAlt, faMinus as fasMinus, faUniversity as fasUniversity, faEnvelope as fasEnvelope,
-  faHeart as fasHeart, faSort as fasSort, faPlusSquare as fasPlusSquare, faMinusSquare as fasMinusSquare,
-  faHorizontalRule as fasHorizontalRule, faSignInAlt as fasSignInAlt,
-  faTreasureChest as fasTreasureChest, faSlidersV as fasSlidersV, faBolt as fasBolt,
-  faBurn as fasBurn, faSack as fasSack, faLayerGroup as fasLayerGroup,
-  faArrowLeft as fasArrowLeft, faArrowRight as fasArrowRight,
-  faChevronLeft as fasChevronLeft, faChevronRight as fasChevronRight,
-  faBooks as farBooks,
-  faBookmark as fasBookmark,
-  faBalanceScale as fasBalanceScale, faBan as fasBan, faBed as fasBed,
-  faBookSpells as fasBookSpells, faBowArrow as fasBowArrow, faBullseyePointer as fasBullseyePointer,
-  faCalendarStar as fasCalendarStar, faChartLine as fasChartLine, faCheck as fasCheck,
-  faCalendarAlt as fasCalendarAlt,
-  faCheckSquare as fasCheckSquare, faClock as fasClock, faCog as fasCog, faCogs as fasCogs,
-  faCopy as fasCopy, faEllipsisH as fasEllipsisH, faEllipsisV as fasEllipsisV,
-  faTriangleExclamation as fasTriangleExclamation,
-  faEye as fasEye, faEyeSlash as fasEyeSlash, faFilter as fasFilter, faFlag as fasFlag,
-  faFlaskPotion as fasFlaskPotion, faForklift as fasForklift, faGem as fasGem, faGift as fasGift,
-  faHelmetBattle as fasHelmetBattle, faHistory as fasHistory, faHoodCloak as fasHoodCloak,
-  faInfoCircle as fasInfoCircle, faInfoSquare as fasInfoSquare, faLevelUp as fasLevelUp,
-  faLevelUpAlt as fasLevelUpAlt, faLockAlt as fasLockAlt, faLockOpenAlt as fasLockOpenAlt,
-  faPlaneAlt as fasPlaneAlt, faQuestionCircle as fasQuestionCircle, faSave as fasSave,
-  faShieldCheck as fasShieldCheck, faSigma as fasSigma, faSortDown as fasSortDown,
-  faSortUp as fasSortUp, faStar as fasStar, faSwords as fasSwords, faSync as fasSync,
-  faSyncAlt as fasSyncAlt, faSyringe as fasSyringe, faTags as fasTags, faTimes as fasTimes,
-  faTrash as fasTrash, faTrashAlt as fasTrashAlt, faTrophy as fasTrophy, faTshirt as fasTShirt,
-  faUserFriends as fasUserFriends, faUsers as fasUsers, faVideo as fasVideo, faShirt as fasShirt,
-  faWheat as fasWheat,
-  faHiking as fasHiking, faUp as fasUp,
-  faSignOutAlt as fasSignOutAlt,
-  faCheckCircle as fasCheckCircle,
-  faCircleNotch as fasCircleNotch,
-  faSkullCrossbones as fasSkullCrossbones,
-  faSkull as fasSkull, faStoreAlt as fasStoreAlt,
-  faStore as fasStore, faUser as fasUser, faChessKnight as fasChessKnight, faTicketAlt as fasTicketAlt,
-  faCabinetFiling as fasCabinetFiling, faStickyNote as fasStickyNote, faMagic as fasMagic,
-  faStarOfLife as fasStarOfLife,
-  faHammerCrash as fasHammerCrash,
-  faUserBountyHunter as fasUserBountyHunter,
-  faSuitcase as fasSuitcase,
-  faHome as fasHome,
-} from '@fortawesome/pro-solid-svg-icons';
 
 
 
@@ -87,209 +9,209 @@ import {
 })
 export class IconService {
   // NOTE: farSquare is actually falSquare
-  public readonly fasHome = fasHome;
-  public readonly fasSuitcase = fasSuitcase;
-  public readonly fasUserBountyHunter = fasUserBountyHunter;
-  public readonly fasUp = fasUp;
-  public readonly fasShirt = fasShirt;
-  public readonly fasHammerCrash = fasHammerCrash;
-  public readonly fasStarOfLife = fasStarOfLife;
-  public readonly farSign = farSign;
-  public readonly fasStoreAlt = fasStoreAlt;
-  public readonly fasHiking = fasHiking;
-  public readonly farTools = farTools;
-  public readonly fasStickyNote = fasStickyNote;
-  public readonly fasSkull = fasSkull;
-  public readonly fasSkullCrossbones = fasSkullCrossbones;
-  public readonly fadShieldAlt = fadShieldAlt;
-  public readonly fasCabinetFiling = fasCabinetFiling;
-  public readonly fasChessKnight = fasChessKnight;
-  public readonly farList = farList;
-  public readonly farCalendar = farCalendar;
-  public readonly fasPlug = fasPlug;
-  public readonly farAward = farAward;
-  public readonly farPercent = farPercent;
-  public readonly fasSignOutAlt = fasSignOutAlt;
-  public readonly fasCheckCircle = fasCheckCircle;
-  public readonly fadHourGlassHalf = fadHourGlassHalf;
-  public readonly fadArchive = fadArchive;
-  public readonly fasTicketAlt = fasTicketAlt;
-  public readonly farBooks = farBooks;
-  public readonly falShoppingCart = falShoppingCart;
-  public readonly falCrosshairs = falCrosshairs;
-  public readonly falBolt = falBolt;
-  public readonly falWheat = falWheat;
-  public readonly falPlusSquare = falPlusSquare;
-  public readonly falMinusSquare = falMinusSquare;
-  public readonly falInfoSquare = falInfoSquare;
-  public readonly falInfinity = falInfinity;
-  public readonly falSwords = falSwords;
-  public readonly falScrollOld = falScrollOld;
-  public readonly falBan = falBan;
-  public readonly falBars = falBars;
-  public readonly fadSort = fadSort;
-  public readonly fadSortUp = fadSortUp;
-  public readonly fadSortDown = fadSortDown;
-  public readonly falLayerGroup = falLayerGroup;
-  public readonly falSun = falSun;
-  public readonly falHatCowboy = falHatCowboy;
-  public readonly falGem = falGem;
-  public readonly falSkullCow = falSkullCow;
-  public readonly fasSort = fasSort;
-  public readonly falSort = falSort;
-  public readonly fasHorizontalRule = fasHorizontalRule;
-  public readonly fasTreasureChest = fasTreasureChest;
-  public readonly fasSignInAlt = fasSignInAlt;
-  public readonly fasSack = fasSack;
-  public readonly fasBurn = fasBurn;
-  public readonly fasBolt = fasBolt;
-  public readonly fasSlidersV = fasSlidersV;
-  public readonly farClipboardCheck = farClipboardCheck;
+  public readonly fasHome = null;
+  public readonly fasSuitcase = null;
+  public readonly fasUserBountyHunter = null;
+  public readonly fasUp = null;
+  public readonly fasShirt = null;
+  public readonly fasHammerCrash = null;
+  public readonly fasStarOfLife = null;
+  public readonly farSign = null;
+  public readonly fasStoreAlt = null;
+  public readonly fasHiking = null;
+  public readonly farTools = null;
+  public readonly fasStickyNote = null;
+  public readonly fasSkull = null;
+  public readonly fasSkullCrossbones = null;
+  public readonly fadShieldAlt = null;
+  public readonly fasCabinetFiling = null;
+  public readonly fasChessKnight = null;
+  public readonly farList = null;
+  public readonly farCalendar = null;
+  public readonly fasPlug = null;
+  public readonly farAward = null;
+  public readonly farPercent = null;
+  public readonly fasSignOutAlt = null;
+  public readonly fasCheckCircle = null;
+  public readonly fadHourGlassHalf = null;
+  public readonly fadArchive = null;
+  public readonly fasTicketAlt = null;
+  public readonly farBooks = null;
+  public readonly falShoppingCart = null;
+  public readonly falCrosshairs = null;
+  public readonly falBolt = null;
+  public readonly falWheat = null;
+  public readonly falPlusSquare = null;
+  public readonly falMinusSquare = null;
+  public readonly falInfoSquare = null;
+  public readonly falInfinity = null;
+  public readonly falSwords = null;
+  public readonly falScrollOld = null;
+  public readonly falBan = null;
+  public readonly falBars = null;
+  public readonly fadSort = null;
+  public readonly fadSortUp = null;
+  public readonly fadSortDown = null;
+  public readonly falLayerGroup = null;
+  public readonly falSun = null;
+  public readonly falHatCowboy = null;
+  public readonly falGem = null;
+  public readonly falSkullCow = null;
+  public readonly fasSort = null;
+  public readonly falSort = null;
+  public readonly fasHorizontalRule = null;
+  public readonly fasTreasureChest = null;
+  public readonly fasSignInAlt = null;
+  public readonly fasSack = null;
+  public readonly fasBurn = null;
+  public readonly fasBolt = null;
+  public readonly fasSlidersV = null;
+  public readonly farClipboardCheck = null;
 
   // public readonly  = ;
-  public readonly fasBed = fasBed;
-  public readonly fasLayerGroup = fasLayerGroup;
-  public readonly fasEye = fasEye;
-  public readonly fasEyeSlash = fasEyeSlash;
-  public readonly fasArrowLeft = fasArrowLeft;
-  public readonly fasArrowRight = fasArrowRight;
-  public readonly fasChevronLeft = fasChevronLeft;
-  public readonly fasChevronRight = fasChevronRight;
-  public readonly farProjectDiagram = farProjectDiagram;
-  public readonly fasClock = fasClock;
-  public readonly falCloudDownload = falCloudDownload;
-  public readonly farGift = farGift;
-  public readonly farCog = farCog;
-  public readonly farBalanceScale = farBalanceScale;
-  public readonly farPalette = farPalette;
+  public readonly fasBed = null;
+  public readonly fasLayerGroup = null;
+  public readonly fasEye = null;
+  public readonly fasEyeSlash = null;
+  public readonly fasArrowLeft = null;
+  public readonly fasArrowRight = null;
+  public readonly fasChevronLeft = null;
+  public readonly fasChevronRight = null;
+  public readonly farProjectDiagram = null;
+  public readonly fasClock = null;
+  public readonly falCloudDownload = null;
+  public readonly farGift = null;
+  public readonly farCog = null;
+  public readonly farBalanceScale = null;
+  public readonly farPalette = null;
 
-  public readonly falTrophy = falTrophy;
-  public readonly falGamepad = falGamepad;
-  public readonly fasGamepadAlt = fasGamepadAlt;
+  public readonly falTrophy = null;
+  public readonly falGamepad = null;
+  public readonly fasGamepadAlt = null;
 
-  public readonly farSync = farSync;
-  public readonly farExternalLink = farExternalLink;
-  public readonly farTimes = farTimes;
-  public readonly farTrophy = farTrophy;
+  public readonly farSync = null;
+  public readonly farExternalLink = null;
+  public readonly farTimes = null;
+  public readonly farTrophy = null;
 
-  public readonly fasCalendarStar = fasCalendarStar;
-  public readonly fasCalendarAlt = fasCalendarAlt;
-  public readonly fasTimes = fasTimes;
-  public readonly fasBullseyePointer = fasBullseyePointer;
-  public readonly fasCheck = fasCheck;
-  public readonly fasInfoSquare = fasInfoSquare;
-  public readonly fasHistory = fasHistory;
-  public readonly fasUserFriends = fasUserFriends;
-  public readonly fasUser = fasUser;
-  public readonly fasCircleNotch = fasCircleNotch;
-  public readonly fasStore = fasStore;
-  public readonly fasGift = fasGift;
-  public readonly fasSigma = fasSigma;
-  public readonly fasWheat = fasWheat;
-  public readonly fasPlusSquare = fasPlusSquare;
-  public readonly fasMinusSquare = fasMinusSquare;
+  public readonly fasCalendarStar = null;
+  public readonly fasCalendarAlt = null;
+  public readonly fasTimes = null;
+  public readonly fasBullseyePointer = null;
+  public readonly fasCheck = null;
+  public readonly fasInfoSquare = null;
+  public readonly fasHistory = null;
+  public readonly fasUserFriends = null;
+  public readonly fasUser = null;
+  public readonly fasCircleNotch = null;
+  public readonly fasStore = null;
+  public readonly fasGift = null;
+  public readonly fasSigma = null;
+  public readonly fasWheat = null;
+  public readonly fasPlusSquare = null;
+  public readonly fasMinusSquare = null;
 
-  public readonly fabXbox = fabXbox;
-  public readonly farTimesSquare = farTimesSquare;
-  public readonly fabPlaystation = fabPlaystation;
-  public readonly fabSteam = fabSteam;
-  public readonly fabWindows = fabWindows;
-  public readonly fasTrophy = fasTrophy;
-  public readonly fasFlag = fasFlag;
-  public readonly farInfoSquare = farInfoSquare;
-  public readonly farSigma = farSigma;
-  public readonly fasCog = fasCog;
-  public readonly fasSync = fasSync;
-  public readonly fasTriangleExclamation = fasTriangleExclamation;
-  public readonly farCopy = farCopy;
-  public readonly farTable = farTable;
-  public readonly farCheckSquare = farCheckSquare;
-  public readonly fasCheckSquare = fasCheckSquare;
-  public readonly fasSortDown = fasSortDown;
-  public readonly fasSortUp = fasSortUp;
-  public readonly fasBookSpells = fasBookSpells;
-  public readonly fasFlaskPotion = fasFlaskPotion;
-  public readonly fasGem = fasGem;
-  public readonly fasHoodCloak = fasHoodCloak;
-  public readonly fasStar = fasStar;
-  public readonly fasLockOpenAlt = fasLockOpenAlt;
-  public readonly fasLockAlt = fasLockAlt;
-  public readonly fasShieldCheck = fasShieldCheck;
-  public readonly fasBan = fasBan;
-  public readonly fasFilter = fasFilter;
-  public readonly fasTags = fasTags;
-  public readonly fasSwords = fasSwords;
-  public readonly fasUsers = fasUsers;
-  public readonly fasTShirt = fasTShirt;
-  public readonly fasBalanceScale = fasBalanceScale;
-  public readonly farAxeBattle = farAxeBattle;
-  public readonly farHelmetBattle = farHelmetBattle;
-  public readonly fasPlaneAlt = fasPlaneAlt;
-  public readonly farGem = farGem;
-  public readonly fasInfoCircle = fasInfoCircle;
-  public readonly fabYoutube = fabYoutube;
-  public readonly fasLevelUpAlt = fasLevelUpAlt;
-  public readonly fasSave = fasSave;
-  public readonly fasSyringe = fasSyringe;
-  public readonly fasTrashAlt = fasTrashAlt;
-  public readonly fasVideo = fasVideo;
-  public readonly fasChartLine = fasChartLine;
-  public readonly fasSyncAlt = fasSyncAlt;
-  public readonly fasEllipsisV = fasEllipsisV;
-  public readonly fasEllipsisH = fasEllipsisH;
-  public readonly fasForklift = fasForklift;
-  public readonly fasCogs = fasCogs;
-  public readonly fasHelmetBattle = fasHelmetBattle;
-  public readonly fasCopy = fasCopy;
-  public readonly fasQuestionCircle = fasQuestionCircle;
-  public readonly fasTrash = fasTrash;
-  public readonly fasLevelUp = fasLevelUp;
-  public readonly fasMagic = fasMagic;
+  public readonly fabXbox = null;
+  public readonly farTimesSquare = null;
+  public readonly fabPlaystation = null;
+  public readonly fabSteam = null;
+  public readonly fabWindows = null;
+  public readonly fasTrophy = null;
+  public readonly fasFlag = null;
+  public readonly farInfoSquare = null;
+  public readonly farSigma = null;
+  public readonly fasCog = null;
+  public readonly fasSync = null;
+  public readonly fasTriangleExclamation = null;
+  public readonly farCopy = null;
+  public readonly farTable = null;
+  public readonly farCheckSquare = null;
+  public readonly fasCheckSquare = null;
+  public readonly fasSortDown = null;
+  public readonly fasSortUp = null;
+  public readonly fasBookSpells = null;
+  public readonly fasFlaskPotion = null;
+  public readonly fasGem = null;
+  public readonly fasHoodCloak = null;
+  public readonly fasStar = null;
+  public readonly fasLockOpenAlt = null;
+  public readonly fasLockAlt = null;
+  public readonly fasShieldCheck = null;
+  public readonly fasBan = null;
+  public readonly fasFilter = null;
+  public readonly fasTags = null;
+  public readonly fasSwords = null;
+  public readonly fasUsers = null;
+  public readonly fasTShirt = null;
+  public readonly fasBalanceScale = null;
+  public readonly farAxeBattle = null;
+  public readonly farHelmetBattle = null;
+  public readonly fasPlaneAlt = null;
+  public readonly farGem = null;
+  public readonly fasInfoCircle = null;
+  public readonly fabYoutube = null;
+  public readonly fasLevelUpAlt = null;
+  public readonly fasSave = null;
+  public readonly fasSyringe = null;
+  public readonly fasTrashAlt = null;
+  public readonly fasVideo = null;
+  public readonly fasChartLine = null;
+  public readonly fasSyncAlt = null;
+  public readonly fasEllipsisV = null;
+  public readonly fasEllipsisH = null;
+  public readonly fasForklift = null;
+  public readonly fasCogs = null;
+  public readonly fasHelmetBattle = null;
+  public readonly fasCopy = null;
+  public readonly fasQuestionCircle = null;
+  public readonly fasTrash = null;
+  public readonly fasLevelUp = null;
+  public readonly fasMagic = null;
 
-  public readonly falBowArrow = falBowArrow;
+  public readonly falBowArrow = null;
 
-  public readonly fasBowArrow = fasBowArrow;
-  public readonly fabPaypal = fabPaypal;
-  public readonly fabReddit = fabReddit;
-  public readonly fabTwitter = fabTwitter;
-  public readonly fabAmazon = fabAmazon;
-  public readonly fabGithub = fabGithub;
-  public readonly falEnvelope = falEnvelope;
-  public readonly falDownload = falDownload;
-  public readonly falUpload = falUpload;
-  public readonly falEye = falEye;
-  public readonly falEyeSlash = falEyeSlash;
-  public readonly falEnvelopeOpen = falEnvelopeOpen;
-  public readonly falTshirt = falTshirt;
-  public readonly falExchange = falExchange;
-  public readonly falClone = falClone;
-  public readonly falCopy = falCopy;
-  public readonly falDiceD20 = falDiceD20;
+  public readonly fasBowArrow = null;
+  public readonly fabPaypal = null;
+  public readonly fabReddit = null;
+  public readonly fabTwitter = null;
+  public readonly fabAmazon = null;
+  public readonly fabGithub = null;
+  public readonly falEnvelope = null;
+  public readonly falDownload = null;
+  public readonly falUpload = null;
+  public readonly falEye = null;
+  public readonly falEyeSlash = null;
+  public readonly falEnvelopeOpen = null;
+  public readonly falTshirt = null;
+  public readonly falExchange = null;
+  public readonly falClone = null;
+  public readonly falCopy = null;
+  public readonly falDiceD20 = null;
 
-  public readonly fadVault = fadVault;
-  public readonly fasEnvelope = fasEnvelope;
-  public readonly fasUniversity = fasUniversity;
-  public readonly falSortDown = falSortDown;
-  public readonly falSortUp = falSortUp;
-  public readonly falSigma = falSigma;
-  public readonly falCheckSquare = falCheckSquare;
-  public readonly farCheckSqure = farCheckSqure;
-  public readonly farSquare = farSquare;
-  public readonly farSearch = farSearch;
-  public readonly farStar = farStar;
-  public readonly farSpinner = farSpinner;
-  public readonly farBadgeCheck = farBadgeCheck;
-  public readonly farMedal = farMedal;
-  public readonly farThumbtack = farThumbtack;
-  public readonly farAlien = farAlien;
+  public readonly fadVault = null;
+  public readonly fasEnvelope = null;
+  public readonly fasUniversity = null;
+  public readonly falSortDown = null;
+  public readonly falSortUp = null;
+  public readonly falSigma = null;
+  public readonly falCheckSquare = null;
+  public readonly farCheckSqure = null;
+  public readonly farSquare = null;
+  public readonly farSearch = null;
+  public readonly farStar = null;
+  public readonly farSpinner = null;
+  public readonly farBadgeCheck = null;
+  public readonly farMedal = null;
+  public readonly farThumbtack = null;
+  public readonly farAlien = null;
 
-  public readonly farMinusSquare = farMinusSquare;
+  public readonly farMinusSquare = null;
 
-  public readonly fasMinus = fasMinus;
-  public readonly farHeart = farHeart;
-  public readonly fasHeart = fasHeart;
-  public readonly farMapMarkerAlt = farMapMarkerAlt;
+  public readonly fasMinus = null;
+  public readonly farHeart = null;
+  public readonly fasHeart = null;
+  public readonly farMapMarkerAlt = null;
 
-  public readonly farBookmark = farBookmark;
-  public readonly fasBookmark = fasBookmark;
+  public readonly farBookmark = null;
+  public readonly fasBookmark = null;
 }

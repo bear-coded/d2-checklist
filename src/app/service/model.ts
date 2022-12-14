@@ -1,6 +1,3 @@
-import { faGoogle, faPlaystation, faSteam, faWindows, faXbox } from '@fortawesome/free-brands-svg-icons';
-import { faUsers } from '@fortawesome/free-solid-svg-icons';
-import { IconDefinition } from '@fortawesome/pro-light-svg-icons';
 import { DestinyEnergyType } from 'bungie-api-ts/destiny2';
 import { BehaviorSubject } from 'rxjs';
 import { ManifestInventoryItem, SimpleInventoryItem } from './destiny-cache.service';
@@ -1262,9 +1259,9 @@ export class Platform {
     name: string;
     type: number;
     desc: string;
-    icon: IconDefinition;
+    icon: null;
 
-    constructor(type: number, name: string, desc: string, icon: IconDefinition) {
+    constructor(type: number, name: string, desc: string, icon: null) {
         this.type = type;
         this.name = name;
         this.desc = desc;
@@ -1339,13 +1336,13 @@ export class Progression {
 
 export class Const {
     // used for clan filter
-    public static readonly ALL_PLATFORM = new Platform(0, 'ALL', 'All', faUsers);
-    public static readonly XBL_PLATFORM = new Platform(1, 'XBL', 'Xbox', faXbox);
-    public static readonly PSN_PLATFORM = new Platform(2, 'PSN', 'Playstation', faPlaystation);
-    public static readonly STEAM_PLATFORM = new Platform(3, 'STEAM', 'Steam', faSteam);
-    public static readonly BNET_PLATFORM = new Platform(4, 'BNET', 'Battle.net', faWindows);
-    public static readonly STADIA_PLATFORM = new Platform(5, 'STADIA', 'Stadia', faGoogle);
-    public static readonly EPIC_PLATFORM = new Platform(6, 'EPIC', 'Epic', faWindows);
+    public static readonly ALL_PLATFORM = new Platform(0, 'ALL', 'All', null);
+    public static readonly XBL_PLATFORM = new Platform(1, 'XBL', 'Xbox', null);
+    public static readonly PSN_PLATFORM = new Platform(2, 'PSN', 'Playstation', null);
+    public static readonly STEAM_PLATFORM = new Platform(3, 'STEAM', 'Steam', null);
+    public static readonly BNET_PLATFORM = new Platform(4, 'BNET', 'Battle.net', null);
+    public static readonly STADIA_PLATFORM = new Platform(5, 'STADIA', 'Stadia', null);
+    public static readonly EPIC_PLATFORM = new Platform(6, 'EPIC', 'Epic', null);
 
 
 

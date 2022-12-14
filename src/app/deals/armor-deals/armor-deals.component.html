@@ -2,7 +2,7 @@
     <span matTooltip="Vendor armor &gt;=1310 cap whose preferred stat points are better
     than anything you currently have by slot and energy type.">Armor Stat Deals</span>  
     <span class="fake-link pad-left-more" (click)="showTargetArmorStats()" matTooltip="Select preferred stats">
-        <fa-icon [icon]="iconService.fasCog"></fa-icon>
+        
     </span>
 </h3>
 <div class="flex-row" *ngIf="(vendorDeals.legendary.length>0)||(vendorDeals.exotic.length>0); else noLegendaryArmor">

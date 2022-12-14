@@ -31,8 +31,8 @@
         <th class="header-cell">
           <span class="fake-link" (click)="sortData('name')"> {{getTitle()}}
             <ng-container *ngIf="sort.name=='name'">
-              <fa-icon [icon]="iconService.fasSortUp" *ngIf="sort.ascending"></fa-icon>
-              <fa-icon [icon]="iconService.fasSortDown" *ngIf="!sort.ascending"></fa-icon>
+              
+              
             </ng-container>
           </span>
 
@@ -40,8 +40,8 @@
         <th class="header-cell">
           <span class="fake-link" (click)="sortData('player')"> Player
             <ng-container *ngIf="sort.name=='player'">
-              <fa-icon [icon]="iconService.fasSortUp" *ngIf="sort.ascending"></fa-icon>
-              <fa-icon [icon]="iconService.fasSortDown" *ngIf="!sort.ascending"></fa-icon>
+              
+              
             </ng-container>
           </span>
 
@@ -49,16 +49,16 @@
         <th class="header-cell" *ngIf="mode!='quests'">
           <span class="fake-link" (click)="sortData('expiration')"> Expiration
             <ng-container *ngIf="sort.name=='expiration'">
-              <fa-icon [icon]="iconService.fasSortUp" *ngIf="sort.ascending"></fa-icon>
-              <fa-icon [icon]="iconService.fasSortDown" *ngIf="!sort.ascending"></fa-icon>
+              
+              
             </ng-container>
           </span>
         </th>
         <th class="header-cell">
           <span class="fake-link" (click)="sortData('progress')"> Progress
             <ng-container *ngIf="sort.name=='progress'">
-              <fa-icon [icon]="iconService.fasSortUp" *ngIf="sort.ascending"></fa-icon>
-              <fa-icon [icon]="iconService.fasSortDown" *ngIf="!sort.ascending"></fa-icon>
+              
+              
             </ng-container>
           </span>
         </th>
@@ -78,27 +78,27 @@
                 <ng-container *ngIf="g.lowLinks==null || g.lowLinks.mapLink==null"> {{g.name}}</ng-container>
                 <a [href]="g.lowLinks.mapLink" *ngIf="g.lowLinks!=null && g.lowLinks.mapLink!=null" target="_blank"
                   rel="noopener">
-                  {{g.name}} <fa-icon [icon]="iconService.farMapMarkerAlt" class="accent-text"></fa-icon>
+                  {{g.name}} 
                 </a>
                 <button mat-icon-button *ngIf="state.dTrackedPursuits[g.hash]!=true" (click)="state.trackPursuit(g)">
-                  <fa-icon [icon]="iconService.farStar"></fa-icon>
+                  
                 </button>
                 <button mat-icon-button *ngIf="state.dTrackedPursuits[g.hash]==true" (click)="state.untrackPursuit(g)">
-                  <fa-icon [icon]="iconService.fasStar" class="accent-text"></fa-icon>
+                  
                 </button>
                 <!-- <button mat-icon-button *ngIf="state.dTrackedPursuits[g.hash]==true" (click)="state.untrackPursuit(g)">
-                  <fa-icon [icon]="iconService.fasStar" class="accent-text"></fa-icon>
+                  
                 </button>
                 <button mat-icon-button *ngIf="!g.tracked"  matTooltip="Click to track this in game." (click)="state.gameTrackPursuit(g, true)">
-                  <fa-icon [icon]="iconService.farBookmark"></fa-icon>
+                  
                 </button>
                 <button mat-icon-button *ngIf="g.tracked" matTooltip="This is tracked in game, click to untrack." (click)="state.gameTrackPursuit(g, false)">
-                  <fa-icon [icon]="iconService.fasBookmark" class="accent-text"></fa-icon>
+                  
                 </button> -->
                 <span *ngIf="debugmode|async">&ensp;[{{g.hash}}]</span>
                 <div *ngIf="g.questline">
                   <a mat-stroked-button (click)="openQuestDialog(g.questline)">
-                    <fa-icon [icon]="iconService.farProjectDiagram"></fa-icon> Questline {{g.questline.progress}}
+                     Questline {{g.questline.progress}}
                   </a>
                 </div>
                 <div class="simple-caption pursuit-caption">{{g.desc}}</div>
@@ -125,12 +125,12 @@
             </span>
             <ng-template #notExpired>
               <span *ngIf="g.expirationDate!=null else noExp" class="expire-caption">
-                <fa-icon [icon]="iconService.fasClock"></fa-icon>
+                
                 {{ g.expirationDate | d2cAgoHumanized:true }}
               </span>
               <ng-template #noExp>
                 <span class="expire-caption">
-                  <fa-icon [icon]="iconService.fasClock"></fa-icon> Never
+                   Never
                 </span>
               </ng-template>
             </ng-template>
@@ -143,9 +143,8 @@
               </mat-progress-bar>
             </div>
             <div class="obj-desc" *ngFor="let obj of g.objectives">
-              <fa-icon [icon]="iconService.farCheckSquare" *ngIf="obj.complete"
-                class="accent-text mat-option.mat-selected"></fa-icon>
-              <fa-icon [icon]="iconService.farSquare" *ngIf="!obj.complete"></fa-icon>
+              
+              
               {{obj.progressDescription}}
               <span *ngIf="obj.progress!=null">{{obj.progress}}/{{obj.completionValue}}</span>
             </div>

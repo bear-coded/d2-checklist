@@ -5,11 +5,11 @@
 
             <button mat-icon-button *ngIf="state.dTrackedTriumphIds[triumph.data.hash]!=true"
                 (click)="state.trackTriumph(triumph.data)">
-                <fa-icon [icon]="iconService.farStar"></fa-icon>
+                
             </button>
             <button mat-icon-button *ngIf="state.dTrackedTriumphIds[triumph.data.hash]==true"
                 (click)="state.untrackTriumph(triumph.data)">
-                <fa-icon [icon]="iconService.fasStar" class="accent-text"></fa-icon>
+                
             </button>            
         </div>
         <div class="clan-child-spacer"></div>

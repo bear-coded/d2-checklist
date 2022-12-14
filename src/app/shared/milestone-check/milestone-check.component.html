@@ -3,32 +3,32 @@
 
         <ng-container *ngIf="detailed==true && (milestone.phases!=null && milestone.phases.length>0)  else noPhases">
             <ng-container *ngFor="let phase of milestone.phases">                
-                <fa-icon [icon]="iconService.fasCheckSquare" class="accent-text mat-option.mat-selected" *ngIf="phase===true" style="margin-left: 5px"></fa-icon>
-                <fa-icon [icon]="iconService.farSquare" *ngIf="phase===false" style="margin-left: 5px"></fa-icon>                
+                
+                                
             </ng-container>
         </ng-container>
         <ng-template #noPhases>
             <ng-container *ngIf="milestone.complete==true else notComplete">
                 <ng-container *ngIf="milestone.locked">
-                    <fa-icon [icon]="iconService.falMinusSquare" class="faint" matTooltip="Not unlocked"></fa-icon>
+                    
                 </ng-container>
                 <ng-container *ngIf="!milestone.locked">
                     <ng-container *ngIf="milestone.tooLowPower">
-                        <fa-icon [icon]="iconService.falMinusSquare" class="faint" matTooltip="Char PL very low, appears complete but possibly unavailable"></fa-icon>
+                        
                     </ng-container>
                     <ng-container *ngIf="!milestone.tooLowPower">
-                        <fa-icon [icon]="iconService.fasCheckSquare" class="accent-text mat-option.mat-selected"></fa-icon>
+                        
                     </ng-container>
 
                 </ng-container>
             </ng-container>
             <ng-template #notComplete>
                 <ng-container *ngIf="milestone.pct==0 else nonZero">
-                    <ng-container *ngIf="milestone.readyToCollect"><fa-icon class="warn-text"  matTooltip='Reward waiting to be collected' [icon]="iconService.fasStar"></fa-icon></ng-container>
-                    <ng-container *ngIf="!milestone.readyToCollect"><fa-icon [icon]="iconService.farSquare"></fa-icon></ng-container>
+                    <ng-container *ngIf="milestone.readyToCollect"></ng-container>
+                    <ng-container *ngIf="!milestone.readyToCollect"></ng-container>
                 </ng-container>
                 <ng-template #nonZero>
-                    <fa-icon  *ngIf="detailed!=true" [icon]="iconService.farMinusSquare" class="accent-text" [matTooltip]="milestone.info"></fa-icon>
+                    
                     <div class="check-progress-bar" *ngIf="detailed==true">
                         <mat-progress-bar [matTooltip]="milestone.info" mode="determinate" color="" [value]="100 * milestone.pct"></mat-progress-bar>
                     </div>
@@ -45,6 +45,6 @@
         </div>
     </ng-container>
     <ng-template #isNull>
-        <fa-icon [icon]="iconService.farTimesSquare" class="faint" matTooltip="Milestone missing, raise your PL or progress your quests"></fa-icon>
+        
     </ng-template>
 </div>
